@@ -15,9 +15,11 @@
         <h1>Calculator!</h1>
         <form id=”calculatorForm” name=”calculatorForm” method=”POST” action=”calculate”>
             Enter Width: <input type="text" name="width" value="">
-            Enter Height: <input type="text" name="height" value="">
+            Enter Length: <input type="text" name="length" value="">
             <br>          
             <input type="submit" name="submit" value="Submit">
         </form>
+        
+        
     </body>
 </html>

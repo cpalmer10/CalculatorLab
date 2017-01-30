@@ -11,4 +11,16 @@ package Model;
  */
 public class CalculatorService {
     
+    public double calculateAreaRectangle(double width, double length){
+        return width * length;
+       
+    }
+    
+    public double calculateAreaCircle(){
+        return 0;
+    }
+    
+    public double calculateAreaTriangle() {
+        return 0;
+    }
 }

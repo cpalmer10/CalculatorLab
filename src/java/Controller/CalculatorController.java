@@ -25,8 +25,12 @@ public class CalculatorController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        // I DONT HAVE THIS IN MY CLASS 2 LAB ^
-        // IS THAT WHY IT ISNT RUNNING?
+        String width = request.getParameter("width");
+        String length = request.getParameter("length");
+        
+        
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
