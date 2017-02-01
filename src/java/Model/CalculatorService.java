@@ -11,8 +11,10 @@ package Model;
  */
 public class CalculatorService {
     
-    public double calculateAreaRectangle(double width, double length){
-        return width * length;
+    public double calculateAreaRectangle(String width, String length){
+        double len = Double.parseDouble(length);
+        double wid = Double.parseDouble(width);
+        return len * wid;
        
     }
     

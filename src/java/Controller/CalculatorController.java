@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.CalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -26,11 +27,19 @@ public class CalculatorController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
         //PrintWriter out = response.getWriter();
         
+        CalculatorService service = new CalculatorService();
+        
         String width = request.getParameter("width");
         String length = request.getParameter("length");
+        
+        Double area = service.calculateAreaRectangle(width, length);
+        
+        request.setAttribute("answer", area);
+        
         
         RequestDispatcher view =
             request.getRequestDispatcher(RESULT_PAGE);
