@@ -19,11 +19,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "calculate", urlPatterns = {"/calculate"})
 public class CalculatorController extends HttpServlet {
+    
+    private final String START_PAGE = "index.jsp";
+    private final String RESULT_PAGE = "result.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        //PrintWriter out = response.getWriter();
         
         String width = request.getParameter("width");
         String length = request.getParameter("length");

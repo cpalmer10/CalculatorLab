@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Calculator!</h1>
-        <form id=”calculatorForm” name=”calculatorForm” method=”POST” action=”calculate”>
+        <form id=”calculatorForm” name=”calculatorForm” method=”POST” action=”CalculatorController”>
             Enter Width: <input type="text" name="width" value="">
             Enter Length: <input type="text" name="length" value="">
             <br>          
