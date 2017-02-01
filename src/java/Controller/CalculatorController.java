@@ -25,21 +25,18 @@ public class CalculatorController extends HttpServlet {
     private final String START_PAGE = "index.jsp";
     private final String RESULT_PAGE = "result.jsp";
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {       
         response.setContentType("text/html;charset=UTF-8");
-        //PrintWriter out = response.getWriter();
-        
+                
         CalculatorService service = new CalculatorService();
         
+        //Area of Rectangle
         String width = request.getParameter("width");
         String length = request.getParameter("length");
         
         Double area = service.calculateRectangle(width, length);
         
         request.setAttribute("answer", area);
-        
         
         RequestDispatcher view =
             request.getRequestDispatcher(RESULT_PAGE);
