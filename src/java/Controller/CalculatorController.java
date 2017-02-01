@@ -30,6 +30,8 @@ public class CalculatorController extends HttpServlet {
                 
         CalculatorService service = new CalculatorService();
         
+        String calcType = request.getParameter("calcType");
+        
         //Area of Rectangle
         String width = request.getParameter("width");
         String length = request.getParameter("length");
@@ -83,5 +85,6 @@ public class CalculatorController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 
 }
