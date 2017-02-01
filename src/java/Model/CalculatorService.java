@@ -11,18 +11,28 @@ package Model;
  */
 public class CalculatorService {
     
-    public double calculateAreaRectangle(String width, String length){
+    public double calculateRectangle(String width, String length){
         double len = Double.parseDouble(length);
         double wid = Double.parseDouble(width);
         return len * wid;
        
     }
     
-    //public double calculateAreaCircle(){
+    public double calculateCircle(String radius){
+        double rad = Double.parseDouble(radius);
+        double rSquared = rad * rad;
+        return Math.PI * rSquared;
+    }
+    
+    public double calculateTriangle(String sideA, String sideB) {
+        double a = Double.parseDouble(sideA);
+        double b = Double.parseDouble(sideB);
+        double aSquared = a * a;
+        double bSquared = b * b;
+        return aSquared + bSquared;
+    }
+    
+    //public double calculateTrapezoid() {
         //return 0;
     //}
-    
-//    public double calculateAreaTriangle() {
-//        return 0;
-//    }
 }

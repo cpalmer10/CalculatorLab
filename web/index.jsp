@@ -13,13 +13,13 @@
     </head>
     <body>
         <h1>Calculator!</h1>
-        <form id=”calculatorForm” name=”calculatorForm” method=”POST” action=”CalculatorController”>
+        <form id="calculatorForm" name="calculatorForm" method="POST" action="CalculatorController">
             Enter Width: <input type="text" name="width" value="">
             Enter Length: <input type="text" name="length" value="">
             <br>          
             <input type="submit" name="submit" value="Submit">
         </form>
         
-        
+        <p><a href="index.jsp">Back to Home</a></p>
     </body>
 </html>

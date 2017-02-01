@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Chris
  */
-@WebServlet(name = "calculate", urlPatterns = {"/calculate"})
+@WebServlet(name = "CalculatorController", urlPatterns = {"/CalculatorController"})
 public class CalculatorController extends HttpServlet {
     
     private final String START_PAGE = "index.jsp";
@@ -36,7 +36,7 @@ public class CalculatorController extends HttpServlet {
         String width = request.getParameter("width");
         String length = request.getParameter("length");
         
-        Double area = service.calculateAreaRectangle(width, length);
+        Double area = service.calculateRectangle(width, length);
         
         request.setAttribute("answer", area);
         
