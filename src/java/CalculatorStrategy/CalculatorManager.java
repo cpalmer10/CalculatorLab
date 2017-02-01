@@ -11,5 +11,5 @@ package CalculatorStrategy;
  * @author Chris
  */
 public interface CalculatorManager {
-    public abstract double calculateArea(String length, String width, String radius, String sideA, String sideB, String sideC);
+    public abstract double calculateArea(String length, String width, String radius, String sideA, String sideB);
 }

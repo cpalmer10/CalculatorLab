@@ -9,14 +9,15 @@ package CalculatorStrategy;
  *
  * @author Chris
  */
-public class Circle implements CalculatorManager {
+public class Triangle implements CalculatorManager {
+
     @Override
     public double calculateArea(String length, String width, String radius, String sideA, String sideB) {
-        double rad = Double.parseDouble(radius);
-        double rSquared = rad * rad;
-        return Math.PI * rSquared;
+        double a = Double.parseDouble(sideA);
+        double b = Double.parseDouble(sideB);
+        double aSquared = a * a;
+        double bSquared = b * b;
+        return aSquared + bSquared;
     }
-
-    
     
 }

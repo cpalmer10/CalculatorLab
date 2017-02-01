@@ -12,7 +12,7 @@ package CalculatorStrategy;
 public class Rectangle implements CalculatorManager {
     
     @Override
-    public double calculateArea(String length, String width, String radius, String sideA, String sideB, String sideC) {
+    public double calculateArea(String length, String width, String radius, String sideA, String sideB) {
         double len = Double.parseDouble(length);
         double wid = Double.parseDouble(width);
         
