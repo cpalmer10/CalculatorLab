@@ -5,6 +5,9 @@
  */
 package Controller;
 
+import CalculatorStrategy.Circle;
+import CalculatorStrategy.Rectangle;
+import CalculatorStrategy.Triangle;
 import Model.CalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,18 +30,39 @@ public class CalculatorController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {       
         response.setContentType("text/html;charset=UTF-8");
-                
+        Circle cir = new Circle();  
+        Triangle tri = new Triangle();
+        Rectangle rect = new Rectangle();
         CalculatorService service = new CalculatorService();
         
         String calcType = request.getParameter("calcType");
         
+        
         //Area of Rectangle
         String width = request.getParameter("width");
         String length = request.getParameter("length");
+        String radius = request.getParameter("radius");
+        String sideA = request.getParameter("sideA");
+        String sideB = request.getParameter("sideB");
         
-        Double area = service.calculateRectangle(width, length);
+        if (calcType.equals("rectangle")){
+            double areaRectangle = rect.calculateArea(length, width, "", "", "");
+            request.setAttribute("answer", areaRectangle);           
+        } 
+        else if (calcType.equals("circle")){
+            double areaCircle = cir.calculateArea("", "", radius, "", "");
+            request.setAttribute("answer", areaCircle);
+        }
+        else if (calcType.equals("triangle")){
+            double hypotenuse = tri.calculateArea("", "", "", sideA, sideB);
+            request.setAttribute("answer", hypotenuse);
+        }
         
-        request.setAttribute("answer", area);
+        
+        
+        //double area = service.calculateRectangle(width, length);
+      
+        
         
         RequestDispatcher view =
             request.getRequestDispatcher(RESULT_PAGE);
