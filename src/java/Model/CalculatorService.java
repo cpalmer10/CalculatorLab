@@ -16,11 +16,11 @@ public class CalculatorService {
        
     }
     
-    public double calculateAreaCircle(){
-        return 0;
-    }
+    //public double calculateAreaCircle(){
+        //return 0;
+    //}
     
-    public double calculateAreaTriangle() {
-        return 0;
-    }
+//    public double calculateAreaTriangle() {
+//        return 0;
+//    }
 }
